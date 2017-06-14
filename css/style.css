@@ -1,0 +1,181 @@
+/* Body Style
+===============================*/
+.remove-margin-and-padding-left{
+	width: 13.666667%;
+	padding-right: 0;
+}
+
+.remove-margin-and-padding-right{
+	width: 86.333333%;
+	padding-left: 0;
+}
+
+
+
+/* Search Algo
+================*/
+#search-algo input{
+	height: 25px;
+    width: 145px;
+    border-radius: 20px;
+    background-color:  #383e46;
+}
+
+#search-algo i{
+	padding-left: 10px;
+}
+
+
+/* Simulation Control
+========================*/
+
+#simulation-control{
+	height: 40px;
+    /*margin-left: -40px;*/
+    margin-top: -12px;
+    background-color: #2e353d;
+}
+
+.control-list{
+	list-style: none;
+    padding-left: 560px;
+
+}
+
+.control-item{
+	float: left;
+	padding: 10px 20px;
+	background-color: #2e353d;
+	color: #e1ffff;
+}
+
+.control-item:hover{
+	background-color: #525f6d;
+}
+
+
+/* Simulation Control
+========================*/
+.main-section{
+
+	display: flex;
+
+  	flex-direction: row;
+	/*overflow: hidden;*/
+  
+  	
+  	xtouch-action: none;
+}
+
+
+.visPlusLink{
+
+	flex: 0 0 auto;
+	align-self: flex-start;
+	
+
+	min-height: 500px;
+ 	min-width: 150px;
+ 	max-width: 890px;
+ 	white-space: nowrap;
+ 	background-color: #3b4b5f;
+ 	color: #e1ffff;
+}
+
+.splitter{
+  flex: 0 0 auto;
+  width: 5px;  
+  background: url('../images/vsizegrip.png') center center no-repeat #535353;
+  /*min-height: 200px;*/
+  cursor: col-resize;  
+}
+
+
+.inpPlusCode{
+
+	flex: 1 1 auto;
+	align-self: flex-start;
+	/*min-height: 200px;*/
+  	min-width: 100px;
+  	background-color: #3b4b5f;
+  	color: #e1ffff;
+}
+
+
+/* nested resizing
+========================= */
+
+/* visualization & links section */
+
+.visPlusLink{
+
+	display: flex;
+  	flex-direction: column;
+  	min-height: 200px;
+  	///*overflow: hidden;*/
+}
+
+.visualization{
+
+	flex: 0 0 auto;
+	white-space: nowrap;
+	min-height: 200px;
+	max-height: 403px;
+  	background: #3b4b5f;
+  	color: #e1ffff;
+}
+
+.splitter-horizontal-1 {
+  flex: 0 0 auto;
+  height: 5px;
+  background: url('../images/hsizegrip.png') center center no-repeat #535353;
+  cursor: row-resize;
+}
+
+.learning-links{
+
+	flex: 1 1 auto;
+	white-space: nowrap;
+	min-height: 200px;
+	background: #3b4b5f;
+	color: #e1ffff;
+}
+
+
+/* input & code section */
+
+.inpPlusCode{
+
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100px;
+  	/*overflow: hidden;*/
+}
+
+.input-section{
+
+	flex: 0 0 auto;
+	white-space: nowrap;
+	min-width: 500px;
+	min-height: 100px;
+	max-height: 425px;
+	
+  	background: #3b4b5f;
+  	color: #e1ffff;
+}
+
+.splitter-horizontal-2 {
+  flex: 0 0 auto;
+  height: 5px;
+  background: url('../images/hsizegrip.png') center center no-repeat #535353;
+  cursor: row-resize;
+}
+
+.code-section{
+
+	flex: 1 1 auto;
+	white-space: nowrap;
+	min-height: 200px;
+	background: #3b4b5f;
+	color: #e1ffff;
+}
