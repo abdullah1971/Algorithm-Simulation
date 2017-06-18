@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Algorithm Simulation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font-awesome CSS -->
+    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/algorithm-list.css" rel="stylesheet">
+    <link href="../css/bubbleSort.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Main Container
+    ========================================-->
+    <div class="fluid-container">
+      
+        <div class="row adjust-row-width">
+          
+        <!--Algorithm List
+        ========================================-->
+        <div class="col-sm-2 remove-margin-and-padding-left">
+          
+          <!-- <div class="algorithm-list"> -->
+            
+          <div class="nav-side-menu algorithm-list">
+              <div class="brand">Algorithm Simulation</div>
+              <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            
+              <div class="menu-list">
+        
+                <ul id="menu-content" class="menu-content collapse out">
+                  <li>
+                    <form id="search-algo">
+                      <i class="fa fa-search fa-lg"></i>
+                      <input type="text" name="search" placeholder="            search">
+                    </form>
+                  </li>
+
+                  <li>
+                   <a href="#">
+                   <i class="fa fa-cogs fa-lg"></i> Simulate My Code
+                   </a>
+                  </li>
+
+                    
+                  <!--========================================
+                  =            Sorting Algorithms            =
+                  =========================================-->
+                    
+                    
+                    
+
+                  <li  data-toggle="collapse" data-target="#products" class="collapsed">
+                    <a href="#"><i class="fa fa-gift fa-lg"></i> Sorting Algorithm <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="products">
+
+                      <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                      <li><a href="mergeSort.html">Merge Sort</a></li>
+                      
+                  </ul>
+
+
+                  <!--====  End of Sorting Algorithm  ====-->
+                  
+
+
+
+                  <!--=====================================
+                  =            Graph Algorithm            =
+                  ======================================-->
+                  
+
+
+                  <li data-toggle="collapse" data-target="#service" class="collapsed">
+                    <a href="#"><i class="fa fa-globe fa-lg"></i> Graph Algorithm <span class="arrow"></span></a>
+                  </li>  
+                  <ul class="sub-menu collapse" id="service">
+                    <li><a href="bfs.html">BFS</a></li>
+                    <li><a href="dfs.html">DFS</a></li>
+                    
+                  </ul>
+
+
+                    
+
+                    <!--====  End of Graph Algorithm  ====-->
+                    
+
+
+
+                   <li>
+                    <a href="convexHull.html">
+                    <i class="fa fa-user fa-lg"></i> Convex Hull
+                    </a>
+                   </li>
+
+                     
+                </ul>
+           </div>
+          </div>
+
+          <!-- </div> -->
+
+        </div>
+
+          <!--Visualization + control + input + code
+          ========================================-->
+        <div class="col-sm-10 remove-margin-and-padding-right">
+          
+          <!--Simulation Control
+          ========================================-->
+          <div id="simulation-control">
+            <ul class="control-list">
+              <a href="#">
+                <li class="control-item" id="run">
+                  <i class="glyphicon glyphicon-play"></i> Run
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="control-item" id="prev">
+                  <i class="glyphicon glyphicon-chevron-left"></i> Prev
+                </li>
+              </a>
+              
+              <a href="#">
+                <li class="control-item" id="pause">
+                  <i class="glyphicon glyphicon-pause"></i> Pause
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="control-item" id="next">
+                  <i class="glyphicon glyphicon-chevron-right"></i> Next
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="control-item" id="interval">
+                  Intervel .5 Sec
+                </li>
+              </a>
+
+              <a href="#">
+                <li class="control-item" id="fullScreen">
+                  <i class="glyphicon glyphicon-fullscreen"></i> FullScreen
+                </li>
+              </a>
+
+              
+
+            </ul>
+          </div>
+
+            
+            
+          <div class="content-section">
+      
+        
+          
+            
+            <!-- Visualization + learning links
+            ========================================-->
+            <div id="visPlusLink" class="col-lg-9"">
+              
+
+
+              <!-- Visualization
+              ========================================-->
+              <div id="visualization">
+                
+                
+                
+
+              </div>
+
+              
+
+              <!-- Learning Links
+              ========================================-->
+              <div id="learning-links">
+              
+              <h4 class="link-anouncement">Links to learn Bubble Sort</h4>
+
+              <h5 class="link-type">Text Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="http://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html">Problem Solving with Algorithms and Data Structures</a>
+                  </li>
+
+                </ul>
+
+              <h5 class="link-type">Video Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=Jdtq5uKz-w4">mycodeschool</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=P00xJgWzz2c">xoaxdotnet</a>
+                  </li>
+
+                </ul>
+
+
+                
+              </div>
+
+
+
+
+            </div>
+
+            
+
+            <!-- Input + Code
+            ========================================-->
+            <div id="inpPlusCode" class="col-lg-3">
+              
+
+
+              <!-- Input Section
+              ========================================-->
+              <div id="input-section">
+                
+                <div id="input-container" class="bubble-sort-input-container">
+                  
+                  
+
+                </div>
+                
+                
+                <a href="#" id="input-button" class="btn btn-default btn-lg btn-block pull-bottom" data-toggle="modal" data-target="#inputModal">Insert Your Input</a>
+                
+
+                <!-- modal for taking input -->
+                
+                <div id="inputModal" class="modal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                        <h4 class="modal-title">Your Input</h4>
+
+                      </div>
+                      <div class="modal-body">
+
+                        <p>Input must be space separated <strong>non-zero</strong> number, less than <strong>15</strong> and <strong>max 10</strong> numbers</p>
+
+                        <input type="text" id="userInput" class="form-control">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="close-modal" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="submit-input-on-modal" class="btn btn-primary" data-dismiss="modal">Submit Input</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+              
+
+              <!--Code Section
+              ========================================-->
+              <div id="code-section">
+
+              <h5 class="code-anouncement">C/C++ implementation</h5>
+
+
+<pre class="code"><code>&nbsp;#include < bits/stdc++.h></code>
+<code>&nbsp;using namespace std;</code>
+<code>&nbsp;</code>
+<code>&nbsp;void swap(int *first, int *secon    d)</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int temp = *first;</code>
+<code>&nbsp;    *first = *second;</code>
+<code>&nbsp;    *second = temp;</code>
+<code>&nbsp;}</code>
+<code>&nbsp;</code>
+<code>&nbsp;int main()</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int arr[50], i, j, n;</code>
+<code>&nbsp;</code>
+<code class="bubble-sort-take-input active">&nbsp;    printf("Enter amount of num         bers: \n");</code>
+<code>&nbsp;    scanf("%d",&n);</code>
+<code>&nbsp;</code>
+<code class="bubbleSort-take-input-for">&nbsp;    for(i = 0; i < n; i++)</code>
+<code class="bubbleSort-take-input-scanf">&nbsp;        scanf("%d",&arr[i]);</code>
+<code>&nbsp;</code>
+<code id="bubbleSort-for-i">&nbsp;    for(i = 0; i < n; i++)</code>
+<code>&nbsp;    {</code>
+<code id="bubbleSort-for-j">&nbsp;       for(j = 0; j < n-i-1; j+              +)</code>
+<code>&nbsp;        {</code>
+<code id="bubbleSort-check-condition">&nbsp;            if(arr[j] > arr[j+                   1])</code>
+<code id="bubbleSort-swap">&nbsp;                swap(&arr[j], &                       arr[j+1]);</code>
+<code>&nbsp;        }</code>
+<code>&nbsp;    }</code>
+<code>&nbsp;</code>
+<code>&nbsp;    return 0;</code>
+<code>&nbsp;}</code>
+</pre>
+                
+                
+              </div>
+
+
+
+
+            </div>
+
+                  
+               
+
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <!-- Footer
+    ========================================-->
+    <div class="footer"></div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+    <script src='../js/jquery-3.2.1.js'></script>
+
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <!-- for resizing -->
+    <script src='https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js'></script>
+
+    <script src="../js/bubbleSort.js"></script>
+
+
+    <!--testing purpose
+    ========================================-->
+
+
+      
+    
+
+        
+
+
+
+
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <!-- <script src="../../assets/js/vendor/holder.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>
+<!--http://bootsnipp.com/snippets/featured/responsive-navigation-menu-->

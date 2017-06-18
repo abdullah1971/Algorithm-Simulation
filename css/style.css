@@ -6,8 +6,15 @@
 }
 
 .remove-margin-and-padding-right{
-	width: 86.333333%;
-	padding-left: 0;
+	width: 1172px;
+	padding-left: -8px;
+	margin-left: 177px;
+	padding: 0;
+}
+
+.adjust-row-width{
+
+	margin: 0;
 }
 
 
@@ -34,6 +41,7 @@
     /*margin-left: -40px;*/
     margin-top: -12px;
     background-color: #2e353d;
+    width: 1189px;
 }
 
 .control-list{
@@ -52,6 +60,243 @@
 .control-item:hover{
 	background-color: #525f6d;
 }
+
+
+
+/*----------  resizable Panel  ----------*/
+
+#visPlusLink{
+
+	padding: 0;
+	/*box-sizing: border-box;*/
+
+	background-color: #ECECEC;
+}
+
+
+.content-section{
+
+	width: 1189px;
+}
+
+#visualization{
+
+	height: 440px;
+	overflow-y: auto;
+	overflow-x: auto;
+
+	padding-left: 15px;
+}
+
+#learning-links{
+
+	height: 177px;
+	overflow-y: auto;
+	overflow-x: auto;
+
+	border-top: 3px solid #2e353d;
+}
+
+
+
+#inpPlusCode{
+
+	padding: 0;
+	/*box-sizing: border-box;*/
+
+	border-left: 3px solid #2e353d;
+	background-color: #ECECEC;
+}
+
+#input-section{
+
+	height: 235px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+#code-section{
+
+	height: 385px;
+	overflow-y: auto;
+	overflow-x: auto;
+
+	border-top: 3px solid #2e353d;
+}
+
+
+#splitter-horizontal{
+
+	height: 3px;
+    background-color: #2e353d;
+}
+
+
+
+
+/*----------  custom scroll bar  ----------*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(41, 128, 185,1.0); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(41, 128, 185,1.0); 
+}
+
+
+
+/*=======================================
+=            Learning Links             =
+=======================================*/
+
+.link-anouncement{
+
+	text-align: center;
+	font-weight: 700;
+}
+
+.link-type{
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	padding-left: 30px;
+
+	font-weight: 600;
+}
+
+.link-list{
+
+	list-style: none;
+
+	padding-left: 60px;
+	padding-top: 2px;
+}
+
+/*=====  End of Learning Links  ======*/
+
+
+/*====================================
+=            Code Section            =
+====================================*/
+
+
+#code-section pre code{
+
+ 	display:  inline-block;
+}
+
+.code-anouncement{
+
+	text-align: center;
+    font-weight: 600;
+}
+
+pre.code {
+
+  white-space: pre-wrap;
+}
+
+pre.code:before {
+
+  counter-reset: listing;
+}
+
+pre.code code {
+
+  counter-increment: listing;
+}
+
+pre.code code::before {
+
+  content: counter(listing) ". ";
+  display: inline-block;
+ 
+}
+
+
+
+
+/*=====  End of Code Section  ======*/
+
+
+/*=====================================
+=            Input Section            =
+=====================================*/
+
+
+#input-container{
+
+	height: 189px;
+	background-color: #f5f5f5;
+	/*padding: 13px;*/
+}
+
+.bubble-sort-input-container{
+
+	text-align: center;
+    padding-top: 50px;
+    font-size: 22px;
+    color: green;
+
+}
+
+
+/*=====  End of Input Section  ======*/
+
+
+
+
+/*===================================
+=            media query            =
+===================================*/
+
+
+
+
+
+@media only screen and (max-width: 1220px) {
+    
+    #simulation-control{
+
+    	width: 1024px;
+    	/*width: 820px;*/
+    }
+
+    .content-section{
+
+    	width: 1024px;
+    	/*width: 820px;*/
+    }
+}
+
+
+@media only screen and (max-width: 1020px) {
+    
+    #simulation-control{
+
+    	width: 650px;
+    }
+
+    .content-section{
+
+    	width: 650px;
+    }
+}
+
+/*=====  End of media query  ======*/
+
+
+
+
+
+
 
 
 
