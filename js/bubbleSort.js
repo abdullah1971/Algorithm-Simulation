@@ -19,6 +19,8 @@ var id;
 
 var firstColumnColor, secondColumnColor;
 
+var interval = 1000;
+
 
 
 
@@ -548,8 +550,8 @@ function movePreviousStep() {
 
 		
 
-			$(first).animate({'left' : firstPosition}, {duration:2000});
-			$(second).animate({'left' : secondPosition}, {duration:2000});
+			$(first).animate({'left' : firstPosition}, {duration:interval});
+			$(second).animate({'left' : secondPosition}, {duration:interval});
 
 
 			/*----------  change color what was before swaping  ----------*/
@@ -775,15 +777,15 @@ function moveNextStep() {
 			// $(first).animate({
 			// 	'left': firstPosition,
 			// 	'background-color': '#87ecf1'
-			// }, 2000);
+			// }, interval);
 
 			// $(first).animate({
 			// 	'left': secondPosition,
 			// 	'background-color': '#87ecf1'
-			// }, 2000);
+			// }, interval);
 
-			$(first).animate({'left' : firstPosition}, {duration:2000});
-			$(second).animate({'left' : secondPosition}, {duration:2000});
+			$(first).animate({'left' : firstPosition}, {duration:interval});
+			$(second).animate({'left' : secondPosition}, {duration:interval});
 
 
 			/*----------  change color while swaping  ----------*/
@@ -953,7 +955,7 @@ $(document).ready(function() {
 
 			paused = false;
 
-			id = setInterval(moveNextStep, 2010);
+			id = setInterval(moveNextStep, interval+10);
 
 
 		}
@@ -1026,24 +1028,16 @@ $(document).ready(function() {
 
 
 
+
+
 	$("#interval").on('click', function() {
-
-		/*----------  prevent user to clicking control buttons before giving input  ----------*/
-
-		var getText = $("#input-container").html().trim();
-
-		if(getText.length == 0){
-
-			errorMessage = "Please fill the input.";
-
-			alert(errorMessage);
-		}
-		else{
-
-			
-		}
-		// interval();
+		
+		interval = $("#interval option:selected").val() * 1000;
+		
+		// console.log(interval);
 	});
+
+	
 
 
 
