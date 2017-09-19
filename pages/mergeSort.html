@@ -13,15 +13,15 @@
     <title>Algorithm Simulation</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- font-awesome CSS -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/algorithm-list.css" rel="stylesheet">
-    <link href="css/bubbleSort.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/algorithm-list.css" rel="stylesheet">
+    <link href="../css/mergeSort.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -78,8 +78,8 @@
                   </li>
                   <ul class="sub-menu collapse" id="products">
 
-                      <li><a href="pages/bubbleSort.html">Bubble Sort</a></li>
-                      <li><a href="pages/mergeSort.html">Merge Sort</a></li>
+                      <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                      <li><a href="mergeSort.html">Merge Sort</a></li>
                       
                   </ul>
 
@@ -99,8 +99,8 @@
                     <a href="#"><i class="fa fa-globe fa-lg"></i> Graph Algorithm <span class="arrow"></span></a>
                   </li>  
                   <ul class="sub-menu collapse" id="service">
-                    <li><a href="pages/bfs.html">BFS</a></li>
-                    <li><a href="pages/dfs.html">DFS</a></li>
+                    <li><a href="bfs.html">BFS</a></li>
+                    <li><a href="dfs.html">DFS</a></li>
                     
                   </ul>
 
@@ -203,7 +203,6 @@
               <div id="visualization">
                 
                 
-                <h3 style="text-align: center;padding-top: 140px;">Here you will find <br><br> <strong>Animated Output</strong></h3>
                 
 
               </div>
@@ -214,9 +213,36 @@
               ========================================-->
               <div id="learning-links">
               
-                
+              <h4 class="link-anouncement">Links to learn Merge Sort</h4>
 
-                <h4 style="text-align: center;padding-top: 30px;">Here you will find <br><br> <strong>Learning Links ( both text &amp; video )</strong></h4>
+              <h5 class="link-type">Text Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="http://www.geeksforgeeks.org/merge-sort/">GeeksforGeeks</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/tutorial/">HackerEarth</a>
+                  </li>
+
+                </ul>
+
+              <h5 class="link-type">Video Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=TzeBrDU-JaY">mycodeschool</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=sfmaf4QpVTw&list=PLEbnTDJUr_IeHYw_sfBOJ6gk5pie0yP-0&index=8">Gate Lectures by Ravindrababu Ravula</a>
+                  </li>
+
+                </ul>
+
 
                 
               </div>
@@ -240,19 +266,39 @@
                 
                 <div id="input-container" class="bubble-sort-input-container">
                   
-                  <!-- <h3>Here You Will Find Your Own Input ( given throw the input box ) </h3> -->
-
-                  <h4 style="text-align: center;padding-top: 10px;color: black;">Here you will find <br><br> <strong>Your Own Input ( given throw the input box )</strong></h4>
+                  
 
                 </div>
                 
                 
-                <a href="#" id="input-button" class="btn btn-default btn-lg btn-block pull-bottom">Insert Your Input</a>
+                <a href="#" id="input-button" class="btn btn-default btn-lg btn-block pull-bottom" data-toggle="modal" data-target="#inputModal">Insert Your Input</a>
                 
 
+                <!-- modal for taking input -->
                 
-                
-                
+                <div id="inputModal" class="modal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                        <h4 class="modal-title">Your Input</h4>
+
+                      </div>
+                      <div class="modal-body">
+
+                        <p>Input must be space separated <strong>non-zero</strong> number, less than or equal <strong>10</strong> and <strong>max 10</strong> numbers</p>
+
+                        <input type="text" id="userInput" class="form-control">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="close-modal" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="submit-input-on-modal" class="btn btn-primary" data-dismiss="modal">Submit Input</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
               </div>
@@ -264,10 +310,88 @@
               ========================================-->
               <div id="code-section">
 
-                <h5 class="code-anouncement" style="padding: 4px">C/C++ implementation</h5>
+              <h5 class="code-anouncement">C/C++ implementation</h5>
 
 
-                <h4 style="background-color: white;height: 346px;text-align: center;padding-top: 100px;">Here you will find <br><br> <strong>C/C++ Implementation of Algorithm</strong></h4>
+<pre class="code"><code>&nbsp;#include < bits/stdc++.h></code>
+<code>&nbsp;using namespace std;</code>
+<code>&nbsp;</code>
+<code>&nbsp;void merge(int *,int, int , int );</code>
+<code>&nbsp;</code>
+<code>&nbsp;void mergesort(int *arr, int low, int high);</code>
+<code>&nbsp;</code>
+<code>&nbsp;int main()</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int arr[20], i, num;</code>
+<code>&nbsp;</code>
+<code class="take-input active">&nbsp;    cout<<"Enter the number of elements:\n";</code>
+<code>&nbsp;    cin>>num;</code>
+<code>&nbsp;</code>
+<code>&nbsp;    cout<<"Enter  the elements\n";</code>
+<code>&nbsp;    for (i = 0; i < num; i++)</code>
+<code>&nbsp;        cin>>arr[i];</code>
+<code>&nbsp;</code>
+<code class="first-call-merge-sort">&nbsp;    mergesort(arr, 0, num-1);</code>
+<code>&nbsp;</code>
+<code>&nbsp;    return 0;</code>
+<code>&nbsp;}</code>
+<code>&nbsp;</code>
+<code class="mergeSort-function">&nbsp;void mergesort(int *arr, int low, int high)</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int mid;</code>
+<code class="check-low-high">&nbsp;    if (low < high)</code>
+<code>&nbsp;    {</code>
+<code class="calculate-mid">&nbsp;        mid=(low+high)/2;</code>
+<code class="merge-sort-function-inside-first">&nbsp;        mergesort(arr,low,mid);</code>
+<code class="merge-sort-function-inside-second">&nbsp;        mergesort(arr,mid+1,high);</code>
+<code class="merge-function-call">&nbsp;        merge(arr,low,high,mid);</code>
+<code>&nbsp;    }</code>
+<code>&nbsp;    return;</code>
+<code>&nbsp;}</code>
+<code>&nbsp;</code>
+<code>&nbsp;</code>
+<code class="merge-function">&nbsp;void merge(int *arr, int low, int high, int mid)</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int i, j, k, temp[50];</code>
+<code>&nbsp;    i = low;</code>
+<code>&nbsp;    k = low;</code>
+<code>&nbsp;    j = mid + 1;</code>
+<code class="first-merge-try">&nbsp;    while (i <= mid && j <= high)</code>
+<code>&nbsp;    {</code>
+<code class="take-i">&nbsp;        if (arr[i] < arr[j])</code>
+<code>&nbsp;       {</code>
+<code class="yes-i">&nbsp;            temp[k] = arr[i];</code>
+<code class="yes-i">&nbsp;            k++;</code>
+<code class="yes-i">&nbsp;            i++;</code>
+<code>&nbsp;        }</code>
+<code class="take-j">&nbsp;        else</code>
+<code>&nbsp;        {</code>
+<code class="yes-j">&nbsp;            temp[k] = arr[j];</code>
+<code class="yes-j">&nbsp;            k++;</code>
+<code class="yes-j">&nbsp;            j++;</code>
+<code>&nbsp;        }</code>
+<code>&nbsp;    }</code>
+<code class="first-array-left">&nbsp;    while (i <= mid)</code>
+<code>&nbsp;    {</code>
+<code class="take-first-array-left">&nbsp;        temp[k] = arr[i];</code>
+<code class="take-first-array-left">&nbsp;        k++;</code>
+<code class="take-first-array-left">&nbsp;        i++;</code>
+<code>&nbsp;    }</code>
+<code class="second-array-left">&nbsp;    while (j <= high)</code>
+<code>&nbsp;    {</code>
+<code class="take-second-array-left">&nbsp;        temp[k] = arr[j];</code>
+<code class="take-second-array-left">&nbsp;        k++;</code>
+<code class="take-second-array-left">&nbsp;        j++;</code>
+<code>&nbsp;    }</code>
+<code class="create-final-array">&nbsp;    for (i = low; i < k; i++)</code>
+<code>&nbsp;    {</code>
+<code class="take-final-array">&nbsp;        arr[i] = temp[i];</code>
+<code>&nbsp;    }</code>
+<code>&nbsp;}</code>
+</pre>
+
+
+
                 
                 
               </div>
@@ -299,15 +423,15 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src='js/jquery-3.2.1.js'></script>
+    <script src='../js/jquery-3.2.1.js'></script>
 
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     
     <!-- for resizing -->
     <script src='https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js'></script>
 
-    <script src="js/bubbleSort.js"></script>
+    <script src="../js/mergeSort.js"></script>
 
 
     <!--testing purpose

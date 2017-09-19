@@ -13,15 +13,15 @@
     <title>Algorithm Simulation</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- font-awesome CSS -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/algorithm-list.css" rel="stylesheet">
-    <link href="css/bubbleSort.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/algorithm-list.css" rel="stylesheet">
+    <link href="../css/bubbleSort.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -78,8 +78,8 @@
                   </li>
                   <ul class="sub-menu collapse" id="products">
 
-                      <li><a href="pages/bubbleSort.html">Bubble Sort</a></li>
-                      <li><a href="pages/mergeSort.html">Merge Sort</a></li>
+                      <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                      <li><a href="mergeSort.html">Merge Sort</a></li>
                       
                   </ul>
 
@@ -99,8 +99,8 @@
                     <a href="#"><i class="fa fa-globe fa-lg"></i> Graph Algorithm <span class="arrow"></span></a>
                   </li>  
                   <ul class="sub-menu collapse" id="service">
-                    <li><a href="pages/bfs.html">BFS</a></li>
-                    <li><a href="pages/dfs.html">DFS</a></li>
+                    <li><a href="bfs.html">BFS</a></li>
+                    <li><a href="dfs.html">DFS</a></li>
                     
                   </ul>
 
@@ -200,10 +200,9 @@
 
               <!-- Visualization
               ========================================-->
-              <div id="visualization">
+              <div id="visualization" style="height: 452px;">
                 
                 
-                <h3 style="text-align: center;padding-top: 140px;">Here you will find <br><br> <strong>Animated Output</strong></h3>
                 
 
               </div>
@@ -214,9 +213,36 @@
               ========================================-->
               <div id="learning-links">
               
-                
+              <h4 class="link-anouncement">Links to learn Bubble Sort</h4>
 
-                <h4 style="text-align: center;padding-top: 30px;">Here you will find <br><br> <strong>Learning Links ( both text &amp; video )</strong></h4>
+              <h5 class="link-type">Text Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="http://www.geeksforgeeks.org/bubble-sort/">GeeksforGeeks</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html">Problem Solving with Algorithms and Data Structures</a>
+                  </li>
+
+                </ul>
+
+              <h5 class="link-type">Video Tutorial :- </h5>
+
+                <ul class="link-list">
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=Jdtq5uKz-w4">mycodeschool</a>
+                  </li>
+
+                  <li>
+                      <a target="_blank" href="https://www.youtube.com/watch?v=P00xJgWzz2c">xoaxdotnet</a>
+                  </li>
+
+                </ul>
+
 
                 
               </div>
@@ -240,19 +266,39 @@
                 
                 <div id="input-container" class="bubble-sort-input-container">
                   
-                  <!-- <h3>Here You Will Find Your Own Input ( given throw the input box ) </h3> -->
-
-                  <h4 style="text-align: center;padding-top: 10px;color: black;">Here you will find <br><br> <strong>Your Own Input ( given throw the input box )</strong></h4>
+                  
 
                 </div>
                 
                 
-                <a href="#" id="input-button" class="btn btn-default btn-lg btn-block pull-bottom">Insert Your Input</a>
+                <a href="#" id="input-button" class="btn btn-default btn-lg btn-block pull-bottom" data-toggle="modal" data-target="#inputModal">Insert Your Input</a>
                 
 
+                <!-- modal for taking input -->
                 
-                
-                
+                <div id="inputModal" class="modal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                        <h4 class="modal-title">Your Input</h4>
+
+                      </div>
+                      <div class="modal-body">
+
+                        <p>Input must be either <strong>5</strong> , <strong>8</strong> or <strong>10</strong></p>
+
+                        <input type="text" id="userInput" class="form-control">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="close-modal" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="submit-input-on-modal" class="btn btn-primary" data-dismiss="modal">Submit Input</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
               </div>
@@ -264,10 +310,82 @@
               ========================================-->
               <div id="code-section">
 
-                <h5 class="code-anouncement" style="padding: 4px">C/C++ implementation</h5>
+              <h5 class="code-anouncement">C/C++ implementation</h5>
 
 
-                <h4 style="background-color: white;height: 346px;text-align: center;padding-top: 100px;">Here you will find <br><br> <strong>C/C++ Implementation of Algorithm</strong></h4>
+<!-- <pre class="code"><code>&nbsp;#include < bits/stdc++.h></code>
+<code>&nbsp;using namespace std;</code>
+<code>&nbsp;</code>
+<code>&nbsp;void swap(int *first, int *secon    d)</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int temp = *first;</code>
+<code>&nbsp;    *first = *second;</code>
+<code>&nbsp;    *second = temp;</code>
+<code>&nbsp;}</code>
+<code>&nbsp;</code>
+<code>&nbsp;int main()</code>
+<code>&nbsp;{</code>
+<code>&nbsp;    int arr[50], i, j, n;</code>
+<code>&nbsp;</code>
+<code class="bubble-sort-take-input active">&nbsp;    printf("Enter amount of num         bers: \n");</code>
+<code>&nbsp;    scanf("%d",&n);</code>
+<code>&nbsp;</code>
+<code class="bubbleSort-take-input-for">&nbsp;    for(i = 0; i < n; i++)</code>
+<code class="bubbleSort-take-input-scanf">&nbsp;        scanf("%d",&arr[i]);</code>
+<code>&nbsp;</code>
+<code id="bubbleSort-for-i">&nbsp;    for(i = 0; i < n; i++)</code>
+<code>&nbsp;    {</code>
+<code id="bubbleSort-for-j">&nbsp;       for(j = 0; j < n-i-1; j+              +)</code>
+<code>&nbsp;        {</code>
+<code id="bubbleSort-check-condition">&nbsp;            if(arr[j] > arr[j+                   1])</code>
+<code id="bubbleSort-swap">&nbsp;                swap(&arr[j], &                       arr[j+1]);</code>
+<code>&nbsp;        }</code>
+<code>&nbsp;    }</code>
+<code>&nbsp;</code>
+<code>&nbsp;    return 0;</code>
+<code>&nbsp;}</code>
+</pre> -->
+
+<pre class="code"><code>&nbsp;#include< iostream></code>
+<code>#include< conio.h></code>
+<code>#include< stdlib.h></code>
+<code>using namespace std;</code>
+<code>int cost[10][10],i,j,k,n,qu[10],front,rare,v,visit[10],visited[10];</code>
+<code> </code>
+<code>main()</code>
+<code>{</code>
+<code>int m;</code>
+<code>cout <<"enterno of vertices";</code>
+<code>cin >> n;</code>
+<code>cout <<"ente no of edges";</code>
+<code class="active">cin >> m;</code>
+<code>cout <<"\nEDGES \n";</code>
+<code>for(k=1;k<=m;k++)</code>
+<code>{</code>
+<code>cin >>i>>j;</code>
+<code>cost[i][j]=1;</code>
+<code>}</code>
+<code></code> 
+<code>cout <<"enter initial vertex";</code>
+<code>cin >>v;</code>
+<code>cout <<"Visitied vertices\n";</code>
+<code>cout << v;</code>
+<code>visited[v]=1;</code>
+<code>k=1;</code>
+<code>while(k<n)</code>
+<code>{</code>
+<code>for(j=1;j<=n;j++)</code>
+<code>if(cost[v][j]!=0 && visited[j]!=1 && visit[j]!=1)</code>
+<code>{</code>
+<code>visit[j]=1;</code>
+<code>qu[rare++]=j;</code>
+<code>}</code>
+<code>v=qu[front++];</code>
+<code>cout<<v << " ";</code>
+<code>k++;</code>
+<code>visit[v]=0; visited[v]=1;</code>
+<code>}</code>
+<code>}</code></pre>
                 
                 
               </div>
@@ -299,15 +417,15 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src='js/jquery-3.2.1.js'></script>
+    <script src='../js/jquery-3.2.1.js'></script>
 
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     
     <!-- for resizing -->
     <script src='https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js'></script>
 
-    <script src="js/bubbleSort.js"></script>
+    <script src="../js/bfs.js"></script>
 
 
     <!--testing purpose

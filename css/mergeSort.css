@@ -1,0 +1,23 @@
+/*=============================================
+=            Visualization Section            =
+=============================================*/
+
+.col{
+
+	display: inline-block;
+    position: absolute;
+}
+
+.para{
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+}
+
+.active{
+
+	background-color: yellow;
+}
+
+/*=====  End of Visualization Section  ======*/
